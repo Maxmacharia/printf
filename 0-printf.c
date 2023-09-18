@@ -9,13 +9,13 @@
 int _printf(const char *format, ...)
 {
 	int count = 0;
-	
+
 	va_list list_of_args;
 
 	if (format == NULL)
 		return (-1);
 
-	va_start (list_of_args, format);
+	va_start(list_of_args, format);
 
 	while (*format)
 	{
@@ -37,6 +37,7 @@ int _printf(const char *format, ...)
 			else if (*format == 'c')
 			{
 				char c = va_arg(list_of_args, int);
+
 				write(1, &c, 1);
 				count++;
 			}
@@ -46,15 +47,11 @@ int _printf(const char *format, ...)
 				int str_len = 0;
 
 				while ((str[str_len]) != '\0')
-				{
 					str_len++;
-				}
 				write(1, str, str_len);
 				count += str_len;
 			}
-		}
-		format++;
-	}
-	va_end(list_of_args);
+		} format++;
+	} va_end(list_of_args);
 	return (0);
 }
