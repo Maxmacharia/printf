@@ -5,5 +5,6 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
+char *it_to_str(int num);
 
 #endif
