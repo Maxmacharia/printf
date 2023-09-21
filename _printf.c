@@ -47,7 +47,6 @@ int _printf(const char *format, ...)
 			count_chars += count;
 		}
 	}
-
 	print_buffer(buffer, &buff_ind);
 
 	va_end(list);
