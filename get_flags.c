@@ -19,6 +19,7 @@ int get_flags(const char *format, int *i)
 	while (format[current] != '\0')
 	{
 		a = 0;
+
 		while (FLAGS_CH[a] != '\0')
 		{
 			if (format[current] == FLAGS_CH[a])
