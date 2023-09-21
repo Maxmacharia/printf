@@ -124,9 +124,9 @@ int print_reverse(va_list types, char buffer[],
 
 	for (i = i - 1; i >= 0; i--)
 	{
-		char z = str[i];
+		char r = str[i];
 
-		write(1, &z, 1);
+		write(1, &r, 1);
 		count++;
 	}
 	return (count);
